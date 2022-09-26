@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\DamsController as AdminDamsController;
+use App\Http\Controllers\Admin\DamController as AdminDamController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('admin/dams', [AdminDamsController::class, 'index']);
+Route::get('admin/dams', [AdminDamController::class, 'index']);
