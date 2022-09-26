@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('calves', function (Blueprint $table) {
             $table->id();
             $table->foreignId('dam_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('gender_id');
             $table->string('number')->unique();
+            $table->char('gender');
+            $table->date('birthdate');
             $table->timestamps();
         });
     }
