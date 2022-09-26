@@ -2,7 +2,7 @@
 
 namespace App\Models\Admin;
 
-use App\Models\Calf;
+use App\Models\Admin\Calf;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,10 +11,10 @@ class Dam extends Model
     use HasFactory;
 
     protected $fillable = [
-        'number' => 'required|min:4|max:255'
+        'number'
     ];
 
-    public function calfs() {
+    public function calves() {
         return $this->hasMany(Calf::class);
     }
 }
