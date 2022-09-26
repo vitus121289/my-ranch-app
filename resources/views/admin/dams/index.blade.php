@@ -1,5 +1,5 @@
 <x-app-layout>
     <x-slot name="header">
-        Cattles Index
+        Dams Index
     </x-slot>
 </x-app-layout>
