@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Admin;
 
-use App\Http\Livewire\Admin\Dam;
+use App\Models\Admin\Dam;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,9 +11,9 @@ class Calf extends Model
     use HasFactory;
 
     protected $fillable = [
-        'number' => 'required|min:4|max:255',
-        'gender' => 'required|min:1|max:1|alpha',
-        'birthdate' => 'required|date'
+        'number',
+        'gender',
+        'birthdate'
     ];
 
     public function dam() {
