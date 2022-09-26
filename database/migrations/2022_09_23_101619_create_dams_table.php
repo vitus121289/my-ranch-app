@@ -16,10 +16,6 @@ return new class extends Migration
         Schema::create('dams', function (Blueprint $table) {
             $table->id();
             $table->string('number')->unique();
-            // $table->char('gender');
-            $table->float('weight');
-            $table->string('photo');
-            $table->text('remarks');
             $table->timestamps();
         });
     }
