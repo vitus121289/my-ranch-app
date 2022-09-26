@@ -4,10 +4,10 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 
-class Cattle extends Component
+class Dam extends Component
 {
     public function render()
     {
-        return view('livewire.admin.cattle');
+        return view('livewire.admin.dam');
     }
 }
