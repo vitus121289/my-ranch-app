@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('dams', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('sire_id')
+                ->references('id')
+                ->on('sires')
+                ->cascadeOnDelete();
             $table->string('number')->unique();
             $table->timestamps();
         });
