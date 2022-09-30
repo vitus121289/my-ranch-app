@@ -18,18 +18,19 @@
             </x-table.head-col>
         </x-table.head>
         <x-table.body>
+            @foreach ($dams as $dam)
             <tr>
                 <x-table.body-col class="flex items-center">
                     <div class="flex items-center">
                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40"></div>
-                        <div class="font-medium text-gray-800">01-20</div>
+                        <div class="font-medium text-gray-800">{{ $dam->number }}</div>
                     </div>
                 </x-table.body-col>
                 <x-table.body-col class="text-center font-medium text-gray-800">
-                    280Kg
+                    {{ $dam->weight }}
                 </x-table.body-col>
                 <x-table.body-col class="text-center font-medium text-gray-800">
-                    None
+                    {{ $dam->remarks }}
                 </x-table.body-col>
                 <x-table.body-col class="text-center font-medium text-blue-500">
                     Edit
@@ -38,6 +39,7 @@
                     Delete
                 </x-table.body-col>
             </tr>
+            @endforeach
         </x-table.body>
     </x-table.container>
 </x-app-layout>
